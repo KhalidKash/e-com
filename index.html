@@ -67,7 +67,9 @@
         </div>
       </div>
 
-        <div class="header-right" id="header-right-3"><p class="cart-btn">My Cart</p></div>
+        <div class="header-right" id="header-right-3">
+  <a class="cart-btn" href="cart.html">My Cart</a>
+</div>
 
     </div>
   </header>
@@ -95,7 +97,13 @@
     <h3 class="title">Dune</h3>
     <p class="author">Frank Herbert</p>
     <p class="price"><strong>₦9,800</strong></p>
-    <button class="add-to-cart">Add To Cart</button>
+    <button class="add-to-cart" 
+    data-title="Dune"
+    data-author="Frank Herbert"
+    data-price="₦9,800"
+  >
+    Add To Cart
+  </button>
   </div>
 
   <div class="book-card">
@@ -480,16 +488,26 @@
   </div>
 </footer>
 
-<!-- Cart Modal -->
-<!-- <div id="cart-modal" class="modal hidden">
-  <div class="modal-content">
-    <div class="modal-header">
-      <h2>My Cart</h2>
-      <button id="close-cart" class="close-btn">X</button>
-    </div>
-    <ul id="cart-items" class="cart-items"></ul>
-  </div>
-</div> -->
+<script>
 
+document.addEventListener('DOMContentLoaded', () => {
+  const buttons = document.querySelectorAll('.add-to-cart');
+
+  buttons.forEach(button => {
+    button.addEventListener('click', () => {
+      const title = button.dataset.title;
+      const author = button.dataset.author;
+      const price = button.dataset.price;
+
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+      cart.push({ title, author, price });
+      localStorage.setItem('cart', JSON.stringify(cart));
+
+      alert(`${title} added to cart`);
+    });
+  });
+});
+
+</script>
 </body>
 </html>

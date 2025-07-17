@@ -422,40 +422,54 @@ form button:hover {
 }
 
 
-/* Cart Modal
+/* Cart Page */
+
+#cart-items {
+  max-width: 800px;
+  margin: auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
 .cart-item {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 10px 0;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #eee;
+  padding: 15px 0;
 }
 
-.cart-img {
-  width: 50px;
-  height: 75px;
-  object-fit: cover;
+.cart-item:last-child {
+  border-bottom: none;
 }
 
-.cart-info {
-  flex-grow: 1;
+.cart-item h3 {
+  margin: 0;
+  color: #444;
+  font-size: 1.2rem;
 }
 
-.quantity-controls {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-
-.quantity-controls button {
-  padding: 2px 6px;
-  cursor: pointer;
+.cart-item p {
+  margin: 4px 0;
+  color: #666;
 }
 
 .remove-item {
-  background: none;
+  background-color: #ff4d4d;
   border: none;
-  font-size: 1.2rem;
+  color: white;
+  padding: 8px 12px;
+  margin-top: 10px;
+  border-radius: 6px;
   cursor: pointer;
-  color: red;
-} */
+  transition: background-color 0.3s ease;
+}
+
+.remove-item:hover {
+  background-color: #e60000;
+}
+
+p#empty-message {
+  text-align: center;
+  color: #888;
+  font-size: 1.1rem;
+}
