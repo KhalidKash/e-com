@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BooksMart - Best Bookstore In The World</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<!-- Auth Modal -->
+<div id="auth-modal" class="modal hidden">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2>Sign Up / Login</h2>
+      <button id="close-auth" class="close-btn">X</button>
+    </div>
+    <form id="signup-form">
+      <h3>Sign Up</h3>
+      <input type="text" id="signup-username" placeholder="Username" required><br>
+      <input type="password" id="signup-password" placeholder="Password" required><br>
+      <button type="submit">Sign Up</button>
+    </form>
+    <hr>
+    <form id="login-form">
+      <h3>Login</h3>
+      <input type="text" id="login-username" placeholder="Username" required><br>
+      <input type="password" id="login-password" placeholder="Password" required><br>
+      <button type="submit">Login</button>
+    </form>
+  </div>
+</div>
+
+<!-- Account Modal -->
+<div id="account-modal" class="modal hidden">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2>My Account</h2>
+      <button id="close-account" class="close-btn">X</button>
+    </div>
+    <p id="account-greeting">Hello, User!</p>
+  </div>
+</div>
+
+<body>
+
+  <header class="header">
+    <div class="header-container">
+
+      <div class="header-left">
+        <div class="logo"><h1>Books<span>Mart</span></h1></div>
+      </div>
+
+      <div class="header-middle">
+        <input type="text" class="search-box" placeholder="Enter book title or Author">
+      </div>
+
+      <div class="header-right" id="header-right-1"><a href="index.html">Home</a></div>
+
+      <div class="header-right" id="header-right-2">
+
+        <div class="dropdown">
+          <p class="dropdown-toggle" id="signin-btn">Sign Up/Login</p>
+          <div class="dropdown-menu" id="signin-menu">
+            <a href="#" id="open-account-modal">My Account</a>
+          </div>
+        </div>
+      </div>
+
+        <div class="header-right" id="header-right-3"><p class="cart-btn">My Cart</p></div>
+
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>BUSINESS</h1>
+      <p>Navigate the dynamic landscape of business.</p>
+    </div>
+  </section>
+
+  <main class="container book-sections">
+    
+    <section>
+      <div class="book-row">
+
+  <div class="book-card">
+    <img src="/img/rich-dad.jpg" alt="Rich Dad Poor Dad">
+    <h3 class="title">Rich Dad Poor Dad</h3>
+    <p class="author">Robert T. Kiyosaki</p>
+    <p class="price"><strong>₦7,000</strong></p>
+    <button class="add-to-cart">Add To Cart</button>
+  </div>
+
+  <div class="book-card">
+    <img src="/img/Think-and-Grow-Rich.jpg" alt="Think and Grow Rich">
+    <h3 class="title">Think and Grow Rich</h3>
+    <p class="author">Napoleon Hill</p>
+    <p class="price"><strong>₦6,500</strong></p>
+    <button class="add-to-cart">Add To Cart</button>
+  </div>
+
+  <div class="book-card">
+    <img src="/img/The-Intelligent-Investor.jpg" alt="The Intelligent Investor">
+    <h3 class="title">The Intelligent Investor</h3>
+    <p class="author">Benjamin Graham</p>
+    <p class="price"><strong>₦9,800</strong></p>
+    <button class="add-to-cart">Add To Cart</button>
+  </div>
+
+  <div class="book-card">
+    <img src="/img/zero-to-one.jpg" alt="Zero to One">
+    <h3 class="title">Zero to One</h3>
+    <p class="author">Peter Thiel</p>
+    <p class="price"><strong>₦8,200</strong></p>
+    <button class="add-to-cart">Add To Cart</button>
+  </div>
+
+  <div class="book-card">
+    <img src="/img/The-Lean-Startup.jpg" alt="The Lean Startup">
+    <h3 class="title">The Lean Startup</h3>
+    <p class="author">Eric Ries</p>
+    <p class="price"><strong>₦8,900</strong></p>
+    <button class="add-to-cart">Add To Cart</button>
+  </div>
+
+  <div class="book-card">
+    <img src="/img/atomic.jpg" alt="Atomic Habits">
+    <h3 class="title">Atomic Habits</h3>
+    <p class="author">James Clear</p>
+    <p class="price"><strong>₦9,000</strong></p>
+    <button class="add-to-cart">Add To Cart</button>
+  </div>
+
+  <div class="book-card">
+    <img src="/img/start-with-why.jpg" alt="Start with Why">
+    <h3 class="title">Start with Why</h3>
+    <p class="author">Simon Sinek</p>
+    <p class="price"><strong>₦8,400</strong></p>
+    <button class="add-to-cart">Add To Cart</button>
+  </div>
+
+  <div class="book-card">
+    <img src="/img/money.jpg" alt="The Psychology of Money">
+    <h3 class="title">The Psychology of Money</h3>
+    <p class="author">Morgan Housel</p>
+    <p class="price"><strong>₦8,700</strong></p>
+    <button class="add-to-cart">Add To Cart</button>
+  </div>
+
+  <div class="book-card">
+    <img src="/img/fastlane.jpg" alt="The Millionaire Fastlane">
+    <h3 class="title">The Millionaire Fastlane</h3>
+    <p class="author">MJ DeMarco</p>
+    <p class="price"><strong>₦10,000</strong></p>
+    <button class="add-to-cart">Add To Cart</button>
+  </div>
+
+  <div class="book-card">
+    <img src="/img/The-4-Hour-Workweek.jpg" alt="The 4-Hour Workweek">
+    <h3 class="title">The 4-Hour Workweek</h3>
+    <p class="author">Timothy Ferriss</p>
+    <p class="price"><strong>₦9,200</strong></p>
+    <button class="add-to-cart">Add To Cart</button>
+  </div>
+
+</div>
+
+    </section>
+
+  </main>
+
+  <footer class="footer">
+  <div class="footer-top">
+    <div class="footer-column">
+      <h4>HELP</h4>
+      <ul>
+        <li><a href="#">Order Status</a></li>
+        <li><a href="#">Shipping</a></li>
+        <li><a href="#">Return Policy</a></li>
+        <li><a href="#">Support Center</a></li>
+        <li><a href="#">FAQs</a></li>
+        <li><a href="#">Payment Methods</a></li>
+        <li><a href="#">Cookie Settings</a></li>
+        <li><a href="#">Do Not Sell or Share My Personal Information</a></li>
+        <li><a href="#">Accessibility Menu</a></li>
+        <li><a href="#">Accessibility Statement</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h4>WEBSITE</h4>
+      <ul>
+        <li><a href="#">Gift Certificate</a></li>
+        <li><a href="#">Wholesale</a></li>
+        <li><a href="#">Affiliates Program</a></li>
+        <li><a href="#">Deals & Discounts</a></li>
+        <li><a href="#">Reviews</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h4>SERVICES</h4>
+      <ul>
+        <li><a href="#">Find a Drop Box</a></li>
+        <li><a href="#">Libraries</a></li>
+        <li><a href="#">Campus</a></li>
+        <li><a href="#">Booksellers</a></li>
+        <li><a href="#">Host a Drop Box</a></li>
+        <li><a href="#">Client Portal</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h4>ABOUT US</h4>
+      <p>BooksMart is your online destination for books offering a selection of good books.</p>
+    </div>
+  </div>
+
+  <div class="footer-middle">
+    <h2 class="footer-logo">Books<span>Mart</span></h2>
+    <p>Follow us on <strong>Social Media</strong></p>
+    <div class="footer-icons">
+      <a href="#"><img src="https://img.icons8.com/ios-filled/24/000000/instagram-new.png" alt="Instagram"/></a>
+      <a href="#"><img src="https://img.icons8.com/ios-filled/24/000000/facebook-new.png" alt="Facebook"/></a>
+      <a href="#"><img src="https://img.icons8.com/ios-filled/24/000000/twitterx.png" alt="X"/></a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>
+      <a href="#">Terms</a> |
+      <a href="#">Privacy</a> |
+      <a href="#">CCPA</a> |
+      <a href="#">Copyright</a> |
+      <a href="#">Legal</a>
+    </p>
+    <p>&copy; 2025 Better World Books. All Rights Reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>

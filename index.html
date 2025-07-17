@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BooksMart - Best Bookstore In The World</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<!-- Auth Modal -->
+<div id="auth-modal" class="modal hidden">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2>Sign Up / Login</h2>
+      <button id="close-auth" class="close-btn">X</button>
+    </div>
+    <form id="signup-form">
+      <h3>Sign Up</h3>
+      <input type="text" id="signup-username" placeholder="Username" required><br>
+      <input type="password" id="signup-password" placeholder="Password" required><br>
+      <button type="submit">Sign Up</button>
+    </form>
+    <hr>
+    <form id="login-form">
+      <h3>Login</h3>
+      <input type="text" id="login-username" placeholder="Username" required><br>
+      <input type="password" id="login-password" placeholder="Password" required><br>
+      <button type="submit">Login</button>
+    </form>
+  </div>
+</div>
+
+<!-- Account Modal -->
+<div id="account-modal" class="modal hidden">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2>My Account</h2>
+      <button id="close-account" class="close-btn">X</button>
+    </div>
+    <p id="account-greeting">Hello, User!</p>
+  </div>
+</div>
+
+<body>
+
+  <header class="header">
+    <div class="header-container">
+
+      <div class="header-left">
+        <div class="logo"><h1>Books<span>Mart</span></h1></div>
+      </div>
+
+      <div class="header-middle">
+        <input type="text" class="search-box" placeholder="Enter book title or Author">
+      </div>
+
+      <div class="header-right" id="header-right-1"><a href="index.html">Home</a></div>
+
+      <div class="header-right" id="header-right-2">
+
+        <div class="dropdown">
+          <p class="dropdown-toggle" id="signin-btn">Sign Up/Login</p>
+          <div class="dropdown-menu" id="signin-menu">
+            <a href="#" id="open-account-modal">My Account</a>
+          </div>
+        </div>
+      </div>
+
+        <div class="header-right" id="header-right-3"><p class="cart-btn">My Cart</p></div>
+
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>WELCOME TO BOOKSMART</h1>
+      <p>Buy the best books today!</p>
+    </div>
+  </section>
+
+  <main class="container book-sections">
+    <section id="categories">
+      <h2>CATEGORIES</h2>
+      <h3>Click a genre to view its collection</h3>
+    </section>
+    
+    <section>
+      
+      <a href="/sci.html"><h2>SCIENCE FICTION AND FANTASY</h2></a>
+      <div class="book-row">
+
+        <div class="book-card">
+    <img src="/img/Dune-9780441013593.jpg" alt="Dune">
+    <h3 class="title">Dune</h3>
+    <p class="author">Frank Herbert</p>
+    <p class="price"><strong>₦9,800</strong></p>
+    <button class="add-to-cart">Add To Cart</button>
+  </div>
+
+  <div class="book-card">
+    <img src="/img/left-hand-of-darkness.jpg" alt="The Left Hand of Darkness">
+    <h3 class="title">The Left Hand of Darkness</h3>
+    <p class="author">Ursula K. Le Guin</p>
+    <p class="price"><strong>₦8,200</strong></p>
+    <button class="add-to-cart">Add To Cart</button>
+  </div>
+
+  <div class="book-card">
+    <img src="/img/A-Game-of-Thrones.jpg" alt="A Game of Thrones">
+    <h3 class="title">A Game of Thrones</h3>
+    <p class="author">George R.R. Martin</p>
+    <p class="price"><strong>₦11,500</strong></p>
+    <button class="add-to-cart">Add To Cart</button>
+  </div>
+
+  <div class="book-card">
+    <img src="/img/fifthseason.jpg" alt="The Fifth Season">
+    <h3 class="title">The Fifth Season</h3>
+    <p class="author">N.K. Jemisin</p>
+    <p class="price"><strong>₦9,000</strong></p>
+    <button class="add-to-cart">Add To Cart</button>
+  </div>
+
+  <div class="book-card">
+    <img src="/img/Mistborn.jpg" alt="Mistborn: The Final Empire">
+    <h3 class="title">Mistborn: The Final Empire</h3>
+    <p class="author">Brandon Sanderson</p>
+    <p class="price"><strong>₦10,200</strong></p>
+    <button class="add-to-cart">Add To Cart</button>
+  </div>
+
+      </div>
+    </section>
+
+     <a href="/mys.html"><h2>MYSTERY AND THRILLERS</h2></a>
+      <div class="book-row">
+
+        <div class="book-card">
+    <img src="/img/Gone-Girl-Flynn-Gillian-9780307588364.jpg" alt="Gone Girl">
+    <h3 class="title">Gone Girl</h3>
+    <p class="author">Gillian Flynn</p>
+    <p class="price"><strong>₦9,200</strong></p>
+    <button class="add-to-cart">Add To Cart</button>
+  </div>
+
+  <div class="book-card">
+    <img src="/img/dragon-tattoo.jpg" alt="The Girl with the Dragon Tattoo">
+    <h3 class="title">The Girl with the Dragon Tattoo</h3>
+    <p class="author">Stieg Larsson</p>
+    <p class="price"><strong>₦10,500</strong></p>
+    <button class="add-to-cart">Add To Cart</button>
+  </div>
+
+  <div class="book-card">
+    <img src="/img/The-Davinci-Code.jpg" alt="The Da Vinci Code">
+    <h3 class="title">The Da Vinci Code</h3>
+    <p class="author">Dan Brown</p>
+    <p class="price"><strong>₦8,900</strong></p>
+    <button class="add-to-cart">Add To Cart</button>
+  </div>
+
+  <div class="book-card">
+    <img src="/img/silent.jpg" alt="The Silent Patient">
+    <h3 class="title">The Silent Patient</h3>
+    <p class="author">Alex Michaelides</p>
+    <p class="price"><strong>₦9,800</strong></p>
+    <button class="add-to-cart">Add To Cart</button>
+  </div>
+
+  <div class="book-card">
+    <img src="/img/big-little-lies.jpg" alt="Big Little Lies">
+    <h3 class="title">Big Little Lies</h3>
+    <p class="author">Liane Moriarty</p>
+    <p class="price"><strong>₦8,400</strong></p>
+    <button class="add-to-cart">Add To Cart</button>
+  </div>
+
+      </div>
+    </section>
+
+    <a href="/literary.html"><h2>LITERARY FICTION</h2></a>
+      <div class="book-row">
+
+        <div class="book-card">
+    <img src="/img/normal-people.jpg" alt="Normal People">
+    <h3 class="title">Normal People</h3>
+    <p class="author">Sally Rooney</p>
+    <p class="price"><strong>₦7,800</strong></p>
+    <button class="add-to-cart">Add To Cart</button>
+  </div>
+
+  <div class="book-card">
+    <img src="/img/Purple-Hibiscus.jpg" alt="Purple Hibiscus">
+    <h3 class="title">Purple Hibiscus</h3>
+    <p class="author">Chimamanda Ngozi Adichie</p>
+    <p class="price"><strong>₦6,500</strong></p>
+    <button class="add-to-cart">Add To Cart</button>
+  </div>
+
+  <div class="book-card">
+    <img src="/img/shuggie-bain.jpg" alt="Shuggie Bain">
+    <h3 class="title">Shuggie Bain</h3>
+    <p class="author">Douglas Stuart</p>
+    <p class="price"><strong>₦10,300</strong></p>
+    <button class="add-to-cart">Add To Cart</button>
+  </div>
+
+  <div class="book-card">
+    <img src="/img/Disgrace.jpg" alt="Disgrace">
+    <h3 class="title">Disgrace</h3>
+    <p class="author">J.M. Coetzee</p>
+    <p class="price"><strong>₦9,100</strong></p>
+    <button class="add-to-cart">Add To Cart</button>
+  </div>
+
+  <div class="book-card">
+    <img src="/img/Americanah.jpg" alt="Americanah">
+    <h3 class="title">Americanah</h3>
+    <p class="author">Chimamanda Ngozi Adichie</p>
+    <p class="price"><strong>₦7,900</strong></p>
+    <button class="add-to-cart">Add To Cart</button>
+  </div>
+
+      </div>
+    </section>
+
+    <a href="/horr.html"><h2>HORROR</h2></a>
+      <div class="book-row">
+
+        <div class="book-card">
+    <img src="/img/It-King-Stephen.jpg" alt="It">
+    <h3 class="title">It</h3>
+    <p class="author">Stephen King</p>
+    <p class="price"><strong>₦12,000</strong></p>
+    <button class="add-to-cart">Add To Cart</button>
+  </div>
+
+  <div class="book-card">
+    <img src="/img/The-Haunting-of-Hill-House.jpg" alt="The Haunting of Hill House">
+    <h3 class="title">The Haunting of Hill House</h3>
+    <p class="author">Shirley Jackson</p>
+    <p class="price"><strong>₦8,500</strong></p>
+    <button class="add-to-cart">Add To Cart</button>
+  </div>
+
+  <div class="book-card">
+    <img src="/img/mexican-gothic.jpg" alt="Mexican Gothic">
+    <h3 class="title">Mexican Gothic</h3>
+    <p class="author">Silvia Moreno-Garcia</p>
+    <p class="price"><strong>₦9,300</strong></p>
+    <button class="add-to-cart">Add To Cart</button>
+  </div>
+
+  <div class="book-card">
+    <img src="/img/good-indians.jpg" alt="The Only Good Indians">
+    <h3 class="title">The Only Good Indians</h3>
+    <p class="author">Stephen Graham Jones</p>
+    <p class="price"><strong>₦9,800</strong></p>
+    <button class="add-to-cart">Add To Cart</button>
+  </div>
+
+  <div class="book-card">
+    <img src="/img/Dracula.jpg" alt="Dracula">
+    <h3 class="title">Dracula</h3>
+    <p class="author">Bram Stoker</p>
+    <p class="price"><strong>₦6,200</strong></p>
+    <button class="add-to-cart">Add To Cart</button>
+  </div>
+
+      </div>
+    </section>
+
+    <a href="/bio.html"><h2>BIOGRAPHY</h2></a>
+      <div class="book-row">
+
+        <div class="book-card">
+    <img src="/img/Becoming.jpg" alt="Becoming">
+    <h3 class="title">Becoming</h3>
+    <p class="author">Michelle Obama</p>
+    <p class="price"><strong>₦11,500</strong></p>
+    <button class="add-to-cart">Add To Cart</button>
+  </div>
+
+  <div class="book-card">
+    <img src="/img/Long Walk to Freedom.jpg" alt="Long Walk to Freedom">
+    <h3 class="title">Long Walk to Freedom</h3>
+    <p class="author">Nelson Mandela</p>
+    <p class="price"><strong>₦10,000</strong></p>
+    <button class="add-to-cart">Add To Cart</button>
+  </div>
+
+  <div class="book-card">
+    <img src="/img/Steve-Jobs.jpg" alt="Steve Jobs">
+    <h3 class="title">Steve Jobs</h3>
+    <p class="author">Walter Isaacson</p>
+    <p class="price"><strong>₦12,800</strong></p>
+    <button class="add-to-cart">Add To Cart</button>
+  </div>
+
+  <div class="book-card">
+    <img src="/img/trevor-noah.jpg" alt="Born a Crime">
+    <h3 class="title">Born a Crime</h3>
+    <p class="author">Trevor Noah</p>
+    <p class="price"><strong>₦9,400</strong></p>
+    <button class="add-to-cart">Add To Cart</button>
+  </div>
+
+  <div class="book-card">
+    <img src="/img/gandhi.jpg" alt="The Story of My Experiments with Truth">
+    <h3 class="title">The Story of My Experiments with Truth</h3>
+    <p class="author">Mahatma Gandhi</p>
+    <p class="price"><strong>₦7,500</strong></p>
+    <button class="add-to-cart">Add To Cart</button>
+  </div>
+
+      </div>
+    </section>
+
+    <a href="/hist.html"><h2>HISTORY</h2></a>
+      <div class="book-row">
+
+        <div class="book-card">
+    <img src="/img/sapiens.jpg" alt="Sapiens: A Brief History of Humankind">
+    <h3 class="title">Sapiens: A Brief History of Humankind</h3>
+    <p class="author">Yuval Noah Harari</p>
+    <p class="price"><strong>₦12,000</strong></p>
+    <button class="add-to-cart">Add To Cart</button>
+  </div>
+
+  <div class="book-card">
+    <img src="/img/peoples-history.jpg" alt="A People's History of the United States">
+    <h3 class="title">A People's History of the United States</h3>
+    <p class="author">Howard Zinn</p>
+    <p class="price"><strong>₦10,500</strong></p>
+    <button class="add-to-cart">Add To Cart</button>
+  </div>
+
+  <div class="book-card">
+    <img src="/img/guns-germs-steel.jpg" alt="Guns, Germs, and Steel">
+    <h3 class="title">Guns, Germs, and Steel</h3>
+    <p class="author">Jared Diamond</p>
+    <p class="price"><strong>₦11,300</strong></p>
+    <button class="add-to-cart">Add To Cart</button>
+  </div>
+
+  <div class="book-card">
+    <img src="/img/yorubas.jpg" alt="The History of the Yorubas">
+    <h3 class="title">The History of the Yorubas</h3>
+    <p class="author">Samuel Johnson</p>
+    <p class="price"><strong>₦9,000</strong></p>
+    <button class="add-to-cart">Add To Cart</button>
+  </div>
+
+  <div class="book-card">
+    <img src="/img/The-Diary-of-a-Young-Girl.jpg" alt="The Diary of a Young Girl">
+    <h3 class="title">The Diary of a Young Girl</h3>
+    <p class="author">Anne Frank</p>
+    <p class="price"><strong>₦7,200</strong></p>
+    <button class="add-to-cart">Add To Cart</button>
+  </div>
+
+      </div>
+    </section>
+
+    <a href="/bus.html"><h2>BUSINESS</h2></a>
+      <div class="book-row">
+
+        <div class="book-card">
+    <img src="/img/rich-dad.jpg" alt="Rich Dad Poor Dad">
+    <h3 class="title">Rich Dad Poor Dad</h3>
+    <p class="author">Robert T. Kiyosaki</p>
+    <p class="price"><strong>₦7,000</strong></p>
+    <button class="add-to-cart">Add To Cart</button>
+  </div>
+
+  <div class="book-card">
+    <img src="/img/Think-and-Grow-Rich.jpg" alt="Think and Grow Rich">
+    <h3 class="title">Think and Grow Rich</h3>
+    <p class="author">Napoleon Hill</p>
+    <p class="price"><strong>₦6,500</strong></p>
+    <button class="add-to-cart">Add To Cart</button>
+  </div>
+
+  <div class="book-card">
+    <img src="/img/The-Intelligent-Investor.jpg" alt="The Intelligent Investor">
+    <h3 class="title">The Intelligent Investor</h3>
+    <p class="author">Benjamin Graham</p>
+    <p class="price"><strong>₦9,800</strong></p>
+    <button class="add-to-cart">Add To Cart</button>
+  </div>
+
+  <div class="book-card">
+    <img src="/img/zero-to-one.jpg" alt="Zero to One">
+    <h3 class="title">Zero to One</h3>
+    <p class="author">Peter Thiel</p>
+    <p class="price"><strong>₦8,200</strong></p>
+    <button class="add-to-cart">Add To Cart</button>
+  </div>
+
+  <div class="book-card">
+    <img src="/img/The-Lean-Startup.jpg" alt="The Lean Startup">
+    <h3 class="title">The Lean Startup</h3>
+    <p class="author">Eric Ries</p>
+    <p class="price"><strong>₦8,900</strong></p>
+    <button class="add-to-cart">Add To Cart</button>
+  </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+  <div class="footer-top">
+    <div class="footer-column">
+      <h4>HELP</h4>
+      <ul>
+        <li><a href="#">Order Status</a></li>
+        <li><a href="#">Shipping</a></li>
+        <li><a href="#">Return Policy</a></li>
+        <li><a href="#">Support Center</a></li>
+        <li><a href="#">FAQs</a></li>
+        <li><a href="#">Payment Methods</a></li>
+        <li><a href="#">Cookie Settings</a></li>
+        <li><a href="#">Do Not Sell or Share My Personal Information</a></li>
+        <li><a href="#">Accessibility Menu</a></li>
+        <li><a href="#">Accessibility Statement</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h4>WEBSITE</h4>
+      <ul>
+        <li><a href="#">Gift Certificate</a></li>
+        <li><a href="#">Wholesale</a></li>
+        <li><a href="#">Affiliates Program</a></li>
+        <li><a href="#">Deals & Discounts</a></li>
+        <li><a href="#">Reviews</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h4>SERVICES</h4>
+      <ul>
+        <li><a href="#">Find a Drop Box</a></li>
+        <li><a href="#">Libraries</a></li>
+        <li><a href="#">Campus</a></li>
+        <li><a href="#">Booksellers</a></li>
+        <li><a href="#">Host a Drop Box</a></li>
+        <li><a href="#">Client Portal</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h4>ABOUT US</h4>
+      <p>BooksMart is your online destination for books offering a selection of good books.</p>
+    </div>
+  </div>
+
+  <div class="footer-middle">
+    <h2 class="footer-logo">Books<span>Mart</span></h2>
+    <p>Follow us on <strong>Social Media</strong></p>
+    <div class="footer-icons">
+      <a href="#"><img src="https://img.icons8.com/ios-filled/24/000000/instagram-new.png" alt="Instagram"/></a>
+      <a href="#"><img src="https://img.icons8.com/ios-filled/24/000000/facebook-new.png" alt="Facebook"/></a>
+      <a href="#"><img src="https://img.icons8.com/ios-filled/24/000000/twitterx.png" alt="X"/></a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>
+      <a href="#">Terms</a> |
+      <a href="#">Privacy</a> |
+      <a href="#">CCPA</a> |
+      <a href="#">Copyright</a> |
+      <a href="#">Legal</a>
+    </p>
+    <p>&copy; 2025 Better World Books. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<!-- Cart Modal -->
+<!-- <div id="cart-modal" class="modal hidden">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2>My Cart</h2>
+      <button id="close-cart" class="close-btn">X</button>
+    </div>
+    <ul id="cart-items" class="cart-items"></ul>
+  </div>
+</div> -->
+
+</body>
+</html>
