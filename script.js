@@ -3,9 +3,6 @@ const signinBtn = document.getElementById('signin-btn');
 const signinMenu = document.getElementById('signin-menu');
 const authModal = document.getElementById('auth-modal');
 const closeAuth = document.getElementById('close-auth');
-const accountModal = document.getElementById('account-modal');
-const closeAccount = document.getElementById('close-account');
-const accountGreeting = document.getElementById('account-greeting');
 
 // Show Auth Modal
 signinBtn.addEventListener('click', () => {
@@ -43,21 +40,21 @@ document.getElementById('login-form').addEventListener('submit', (e) => {
   }
 });
 
-// Show Account Modal
-signinMenu.querySelectorAll('a')[1].addEventListener('click', () => {
-  const user = localStorage.getItem('loggedInUser');
-  if (user) {
-    accountGreeting.textContent = `Hello, ${user}!`;
-    accountModal.classList.remove('hidden');
-  } else {
-    alert('Please log in first.');
-  }
+// Add to Cart operation
+document.addEventListener('DOMContentLoaded', () => {
+  const buttons = document.querySelectorAll('.add-to-cart');
+
+  buttons.forEach(button => {
+    button.addEventListener('click', () => {
+      const title = button.dataset.title;
+      const author = button.dataset.author;
+      const price = button.dataset.price;
+
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+      cart.push({ title, author, price });
+      localStorage.setItem('cart', JSON.stringify(cart));
+
+      alert(`${title} added to cart`);
+    });
+  });
 });
-
-// Close Account Modal
-closeAccount.addEventListener('click', () => {
-  accountModal.classList.add('hidden');
-});
-
-
-// Cart Modal

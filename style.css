@@ -64,32 +64,8 @@ body {
   border-radius: 20px;
 }
 
-.dropdown{
+.signin {
   position: relative;
-}
-
-.dropdown-menu {
-  display: none;
-  position: absolute;
-  background: white;
-  border: 1px solid #ccc;
-  top: 100%;
-  left: 0;
-  min-width: 160px;
-  z-index: 1;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-
-}
-
-.dropdown-menu a {
-  display: block;
-  padding: 10px;
-  text-decoration: none;
-  color: black;
-}
-
-.dropdown:hover .dropdown-menu {
-  display: block;
 }
 
 .hero {
@@ -357,7 +333,7 @@ button:hover {
 }
 
 
-/* Modal Base */
+Modal Base
 .modal {
   position: fixed;
   top: 0;
