@@ -8,34 +8,9 @@
     <script src="script.js" defer></script>
 </head>
 
-<!-- Auth Modal -->
-<div id="auth-modal" class="modal hidden">
-  <div class="modal-content">
-    <div class="modal-header">
-      <h2>Sign Up / Login</h2>
-      <button id="close-auth" class="close-btn">X</button>
-    </div>
-    <form id="signup-form">
-      <h3>Sign Up</h3>
-      <input type="text" id="signup-username" placeholder="Username" required><br>
-      <input type="password" id="signup-password" placeholder="Password" required><br>
-      <button type="submit">Sign Up</button>
-    </form>
-    <hr>
-    <form id="login-form">
-      <h3>Login</h3>
-      <input type="text" id="login-username" placeholder="Username" required><br>
-      <input type="password" id="login-password" placeholder="Password" required><br>
-      <button type="submit">Login</button>
-    </form>
-  </div>
-</div>
-
-
 <body>
 
   <header class="header">
-    <div class="header-container">
 
       <div class="header-left">
         <div class="logo"><h1>Books<span>Mart</span></h1></div>
@@ -45,6 +20,7 @@
         <input type="text" class="search-box" placeholder="Enter book title or Author">
       </div>
 
+      
       <div class="header-right" id="header-right-1"><a href="index.html">Home</a></div>
 
       <div class="header-right" id="header-right-2">
@@ -52,14 +28,13 @@
         <div class="signin">
           <p class="signin-btn" id="signin-btn">Sign Up/Login</p>
         </div>
-        
+
       </div>
 
         <div class="header-right" id="header-right-3">
   <a class="cart-btn" href="cart.html">My Cart</a>
 </div>
 
-    </div>
   </header>
 
   <section class="hero">
@@ -75,7 +50,7 @@
       <div class="book-row">
 
   <div class="book-card">
-    <img src="../img/little-life.jpg" alt="A Little Life">
+    <img src="img/little-life.jpg" alt="A Little Life">
     <h3 class="title">A Little Life</h3>
     <p class="author">Hanya Yanagihara</p>
     <p class="price"><strong>₦12,500</strong></p>
@@ -83,7 +58,7 @@
   </div>
 
   <div class="book-card">
-    <img src="./img/The-Road.jpg" alt="The Road">
+    <img src="img/The-Road.jpg" alt="The Road">
     <h3 class="title">The Road</h3>
     <p class="author">Cormac McCarthy</p>
     <p class="price"><strong>₦8,200</strong></p>
@@ -91,7 +66,7 @@
   </div>
 
   <div class="book-card">
-    <img src="./img/Half-of-a-Yellow-Sun.jpg" alt="Half of a Yellow Sun">
+    <img src="img/Half-of-a-Yellow-Sun.jpg" alt="Half of a Yellow Sun">
     <h3 class="title">Half of a Yellow Sun</h3>
     <p class="author">Chimamanda Ngozi Adichie</p>
     <p class="price"><strong>₦7,500</strong></p>
@@ -99,7 +74,7 @@
   </div>
 
   <div class="book-card">
-    <img src="./img/The-God-of-Small-Things.jpg" alt="The God of Small Things">
+    <img src="img/The-God-of-Small-Things.jpg" alt="The God of Small Things">
     <h3 class="title">The God of Small Things</h3>
     <p class="author">Arundhati Roy</p>
     <p class="price"><strong>₦8,900</strong></p>
@@ -107,7 +82,7 @@
   </div>
 
   <div class="book-card">
-    <img src="./img/kite-runner.jpg" alt="The Kite Runner">
+    <img src="img/kite-runner.jpg" alt="The Kite Runner">
     <h3 class="title">The Kite Runner</h3>
     <p class="author">Khaled Hosseini</p>
     <p class="price"><strong>₦9,000</strong></p>
@@ -115,7 +90,7 @@
   </div>
 
   <div class="book-card">
-    <img src="./img/normal-people.jpg" alt="Normal People">
+    <img src="img/normal-people.jpg" alt="Normal People">
     <h3 class="title">Normal People</h3>
     <p class="author">Sally Rooney</p>
     <p class="price"><strong>₦7,800</strong></p>
@@ -123,7 +98,7 @@
   </div>
 
   <div class="book-card">
-    <img src="./img/Purple-Hibiscus.jpg" alt="Purple Hibiscus">
+    <img src="img/Purple-Hibiscus.jpg" alt="Purple Hibiscus">
     <h3 class="title">Purple Hibiscus</h3>
     <p class="author">Chimamanda Ngozi Adichie</p>
     <p class="price"><strong>₦6,500</strong></p>
@@ -131,7 +106,7 @@
   </div>
 
   <div class="book-card">
-    <img src="./img/shuggie-bain.jpg" alt="Shuggie Bain">
+    <img src="img/shuggie-bain.jpg" alt="Shuggie Bain">
     <h3 class="title">Shuggie Bain</h3>
     <p class="author">Douglas Stuart</p>
     <p class="price"><strong>₦10,300</strong></p>
@@ -139,7 +114,7 @@
   </div>
 
   <div class="book-card">
-    <img src="./img/Disgrace.jpg" alt="Disgrace">
+    <img src="img/Disgrace.jpg" alt="Disgrace">
     <h3 class="title">Disgrace</h3>
     <p class="author">J.M. Coetzee</p>
     <p class="price"><strong>₦9,100</strong></p>
@@ -147,7 +122,7 @@
   </div>
 
   <div class="book-card">
-    <img src="./img/Americanah.jpg" alt="Americanah">
+    <img src="img/Americanah.jpg" alt="Americanah">
     <h3 class="title">Americanah</h3>
     <p class="author">Chimamanda Ngozi Adichie</p>
     <p class="price"><strong>₦7,900</strong></p>
@@ -161,48 +136,6 @@
   </main>
 
   <footer class="footer">
-  <div class="footer-top">
-    <div class="footer-column">
-      <h4>HELP</h4>
-      <ul>
-        <li><a href="#">Order Status</a></li>
-        <li><a href="#">Shipping</a></li>
-        <li><a href="#">Return Policy</a></li>
-        <li><a href="#">Support Center</a></li>
-        <li><a href="#">FAQs</a></li>
-        <li><a href="#">Payment Methods</a></li>
-        <li><a href="#">Cookie Settings</a></li>
-        <li><a href="#">Do Not Sell or Share My Personal Information</a></li>
-        <li><a href="#">Accessibility Menu</a></li>
-        <li><a href="#">Accessibility Statement</a></li>
-      </ul>
-    </div>
-
-    <div class="footer-column">
-      <h4>WEBSITE</h4>
-      <ul>
-        <li><a href="#">Gift Certificate</a></li>
-        <li><a href="#">Wholesale</a></li>
-        <li><a href="#">Affiliates Program</a></li>
-        <li><a href="#">Deals & Discounts</a></li>
-        <li><a href="#">Reviews</a></li>
-      </ul>
-    </div>
-
-    <div class="footer-column">
-      <h4>SERVICES</h4>
-      <ul>
-        <li><a href="#">Find a Drop Box</a></li>
-        <li><a href="#">Libraries</a></li>
-        <li><a href="#">Campus</a></li>
-        <li><a href="#">Booksellers</a></li>
-        <li><a href="#">Host a Drop Box</a></li>
-        <li><a href="#">Client Portal</a></li>
-      </ul>
-    </div>
-
-   
-  </div>
 
   <div class="footer-middle">
     <h2 class="footer-logo">Books<span>Mart</span></h2>

@@ -8,44 +8,9 @@
     <script src="script.js" defer></script>
 </head>
 
-<!-- Auth Modal -->
-<div id="auth-modal" class="modal hidden">
-  <div class="modal-content">
-    <div class="modal-header">
-      <h2>Sign Up / Login</h2>
-      <button id="close-auth" class="close-btn">X</button>
-    </div>
-    <form id="signup-form">
-      <h3>Sign Up</h3>
-      <input type="text" id="signup-username" placeholder="Username" required><br>
-      <input type="password" id="signup-password" placeholder="Password" required><br>
-      <button type="submit">Sign Up</button>
-    </form>
-    <hr>
-    <form id="login-form">
-      <h3>Login</h3>
-      <input type="text" id="login-username" placeholder="Username" required><br>
-      <input type="password" id="login-password" placeholder="Password" required><br>
-      <button type="submit">Login</button>
-    </form>
-  </div>
-</div>
-
-<!-- Account Modal -->
-<div id="account-modal" class="modal hidden">
-  <div class="modal-content">
-    <div class="modal-header">
-      <h2>My Account</h2>
-      <button id="close-account" class="close-btn">X</button>
-    </div>
-    <p id="account-greeting">Hello, User!</p>
-  </div>
-</div>
-
 <body>
 
   <header class="header">
-    <div class="header-container">
 
       <div class="header-left">
         <div class="logo"><h1>Books<span>Mart</span></h1></div>
@@ -55,6 +20,7 @@
         <input type="text" class="search-box" placeholder="Enter book title or Author">
       </div>
 
+      
       <div class="header-right" id="header-right-1"><a href="index.html">Home</a></div>
 
       <div class="header-right" id="header-right-2">
@@ -62,14 +28,13 @@
         <div class="signin">
           <p class="signin-btn" id="signin-btn">Sign Up/Login</p>
         </div>
-        
+
       </div>
 
         <div class="header-right" id="header-right-3">
   <a class="cart-btn" href="cart.html">My Cart</a>
 </div>
 
-    </div>
   </header>
 
   <section class="hero">
@@ -85,7 +50,7 @@
       <div class="book-row">
 
   <div class="book-card">
-    <img src="./img/Gone-Girl-Flynn-Gillian-9780307588364.jpg" alt="Gone Girl">
+    <img src="img/Gone-Girl-Flynn-Gillian-9780307588364.jpg" alt="Gone Girl">
     <h3 class="title">Gone Girl</h3>
     <p class="author">Gillian Flynn</p>
     <p class="price"><strong>₦9,200</strong></p>
@@ -93,7 +58,7 @@
   </div>
 
   <div class="book-card">
-   <img src="./img/dragon-tattoo.jpg" alt="The Girl with the Dragon Tattoo">
+   <img src="img/dragon-tattoo.jpg" alt="The Girl with the Dragon Tattoo">
     <h3 class="title">The Girl with the Dragon Tattoo</h3>
     <p class="author">Stieg Larsson</p>
     <p class="price"><strong>₦10,500</strong></p>
@@ -101,7 +66,7 @@
   </div>
 
   <div class="book-card">
-    <img src="./img/The-Davinci-Code.jpg" alt="The Da Vinci Code">
+    <img src="img/The-Davinci-Code.jpg" alt="The Da Vinci Code">
     <h3 class="title">The Da Vinci Code</h3>
     <p class="author">Dan Brown</p>
     <p class="price"><strong>₦8,900</strong></p>
@@ -109,7 +74,7 @@
   </div>
 
   <div class="book-card">
-   <img src="./img/silent.jpg" alt="The Silent Patient">
+   <img src="img/silent.jpg" alt="The Silent Patient">
     <h3 class="title">The Silent Patient</h3>
     <p class="author">Alex Michaelides</p>
     <p class="price"><strong>₦9,800</strong></p>
@@ -117,7 +82,7 @@
   </div>
 
   <div class="book-card">
-   <img src="./img/big-little-lies.jpg" alt="Big Little Lies">
+   <img src="img/big-little-lies.jpg" alt="Big Little Lies">
     <h3 class="title">Big Little Lies</h3>
     <p class="author">Liane Moriarty</p>
     <p class="price"><strong>₦8,400</strong></p>
@@ -125,7 +90,7 @@
   </div>
 
   <div class="book-card">
-    <img src="./img/reversal.jpg" alt="The Reversal">
+    <img src="img/reversal.jpg" alt="The Reversal">
     <h3 class="title">The Reversal</h3>
     <p class="author">Michael Connelly</p>
     <p class="price"><strong>₦7,900</strong></p>
@@ -133,7 +98,7 @@
   </div>
 
   <div class="book-card">
-   <img src="./img/Before-I-Go-to-Sleep.jpg" alt="Before I Go to Sleep">
+   <img src="img/Before-I-Go-to-Sleep.jpg" alt="Before I Go to Sleep">
     <h3 class="title">Before I Go to Sleep</h3>
     <p class="author">S.J. Watson</p>
     <p class="price"><strong>₦9,300</strong></p>
@@ -141,7 +106,7 @@
   </div>
 
   <div class="book-card">
-   <img src="./img/girl-on-train.jpg" alt="The Girl on the Train">
+   <img src="img/girl-on-train.jpg" alt="The Girl on the Train">
     <h3 class="title">The Girl on the Train</h3>
     <p class="author">Paula Hawkins</p>
     <p class="price"><strong>₦9,700</strong></p>
@@ -149,7 +114,7 @@
   </div>
 
   <div class="book-card">
-   <img src="./img/Sharp-Objects.jpg" alt="Sharp Objects">
+   <img src="img/Sharp-Objects.jpg" alt="Sharp Objects">
     <h3 class="title">Sharp Objects</h3>
     <p class="author">Gillian Flynn</p>
     <p class="price"><strong>₦8,600</strong></p>
@@ -157,7 +122,7 @@
   </div>
 
   <div class="book-card">
-   <img src="./img/couple-next-door.jpg" alt="The Couple Next Door">
+   <img src="img/couple-next-door.jpg" alt="The Couple Next Door">
     <h3 class="title">The Couple Next Door</h3>
     <p class="author">Shari Lapena</p>
     <p class="price"><strong>₦9,100</strong></p>
@@ -171,48 +136,6 @@
   </main>
 
   <footer class="footer">
-  <div class="footer-top">
-    <div class="footer-column">
-      <h4>HELP</h4>
-      <ul>
-        <li><a href="#">Order Status</a></li>
-        <li><a href="#">Shipping</a></li>
-        <li><a href="#">Return Policy</a></li>
-        <li><a href="#">Support Center</a></li>
-        <li><a href="#">FAQs</a></li>
-        <li><a href="#">Payment Methods</a></li>
-        <li><a href="#">Cookie Settings</a></li>
-        <li><a href="#">Do Not Sell or Share My Personal Information</a></li>
-        <li><a href="#">Accessibility Menu</a></li>
-        <li><a href="#">Accessibility Statement</a></li>
-      </ul>
-    </div>
-
-    <div class="footer-column">
-      <h4>WEBSITE</h4>
-      <ul>
-        <li><a href="#">Gift Certificate</a></li>
-        <li><a href="#">Wholesale</a></li>
-        <li><a href="#">Affiliates Program</a></li>
-        <li><a href="#">Deals & Discounts</a></li>
-        <li><a href="#">Reviews</a></li>
-      </ul>
-    </div>
-
-    <div class="footer-column">
-      <h4>SERVICES</h4>
-      <ul>
-        <li><a href="#">Find a Drop Box</a></li>
-        <li><a href="#">Libraries</a></li>
-        <li><a href="#">Campus</a></li>
-        <li><a href="#">Booksellers</a></li>
-        <li><a href="#">Host a Drop Box</a></li>
-        <li><a href="#">Client Portal</a></li>
-      </ul>
-    </div>
-
-    
-  </div>
 
   <div class="footer-middle">
     <h2 class="footer-logo">Books<span>Mart</span></h2>
@@ -237,5 +160,4 @@
 </footer>
 
 </body>
-</html>
 </html>
