@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
       <img src="${item.image}" alt="${item.title}" width="100">
         <h3>${item.title}</h3>
         <p>${item.author}</p>
-        <p>$${item.price}</p>
+        <p>${item.price}</p>
         <button data-index="${index}" class="remove-item">Remove</button>
       `;
       cartContainer.appendChild(itemDiv);
