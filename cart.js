@@ -15,9 +15,10 @@ document.addEventListener('DOMContentLoaded', () => {
       const itemDiv = document.createElement('div');
       itemDiv.classList.add('cart-item');
       itemDiv.innerHTML = `
+      <img src="${item.image}" alt="${item.title}" width="100">
         <h3>${item.title}</h3>
         <p>${item.author}</p>
-        <p>$${item.price}</p>
+        <p>${item.price}</p>
         <button data-index="${index}" class="remove-item">Remove</button>
       `;
       cartContainer.appendChild(itemDiv);

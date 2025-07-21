@@ -4,12 +4,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   buttons.forEach(button => {
     button.addEventListener('click', () => {
+      const image = button.dataset.image;
       const title = button.dataset.title;
       const author = button.dataset.author;
       const price = button.dataset.price;
 
       let cart = JSON.parse(localStorage.getItem('cart')) || [];
-      cart.push({ title, author, price });
+      cart.push({ image, title, author, price });
       localStorage.setItem('cart', JSON.stringify(cart));
 
       alert(`${title} added to cart`);
