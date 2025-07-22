@@ -12,6 +12,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     cart.forEach((item, index) => {
+
+      if (!item.quantity) item.quantity = 1;
+
       const itemDiv = document.createElement('div');
       itemDiv.classList.add('cart-item');
       itemDiv.innerHTML = `
@@ -19,6 +22,11 @@ document.addEventListener('DOMContentLoaded', () => {
         <h3>${item.title}</h3>
         <p>${item.author}</p>
         <p>${item.price}</p>
+        <div class="quantity-controls">
+          <button class="decrease-qty" data-index="${index}">−</button>
+          <span class="quantity">${item.quantity}</span>
+          <button class="increase-qty" data-index="${index}">+</button>
+        </div>
         <button data-index="${index}" class="remove-item">Remove</button>
       `;
       cartContainer.appendChild(itemDiv);
@@ -33,6 +41,33 @@ document.addEventListener('DOMContentLoaded', () => {
         renderCart();
       });
     });
+
+    // Increase quantity
+    document.querySelectorAll('.increase-qty').forEach(button => {
+      button.addEventListener('click', () => {
+        const index = button.dataset.index;
+        cart[index].quantity += 1;
+        saveCart();
+      });
+    });
+
+    // Decrease quantity
+    document.querySelectorAll('.decrease-qty').forEach(button => {
+      button.addEventListener('click', () => {
+        const index = button.dataset.index;
+        if (cart[index].quantity > 1) {
+          cart[index].quantity -= 1;
+        } else {
+          cart.splice(index, 1); // remove item if quantity hits 0
+        }
+        saveCart();
+      });
+    });
+  }
+
+  function saveCart() {
+    localStorage.setItem('cart', JSON.stringify(cart));
+    renderCart();
   }
 
   renderCart();
