@@ -190,6 +190,7 @@ button:hover {
   text-align: center;
   margin-top: 100px;
   font-size: 14px;
+  color: #666;
 }
 
 .footer {
@@ -225,11 +226,6 @@ button:hover {
 .footer-icons img {
   width: 24px;
   height: 24px;
-}
-
-.footer-bottom {
-  font-size: 13px;
-  color: #666;
 }
 
 .footer-bottom a {
